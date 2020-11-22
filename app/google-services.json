@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "245743563948",
+    "firebase_url": "https://booksum-94c2c.firebaseio.com",
+    "project_id": "booksum-94c2c",
+    "storage_bucket": "booksum-94c2c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:245743563948:android:b7b40ccb8d6951e82c1b09",
+        "android_client_info": {
+          "package_name": "com.saltserv.firelogin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "245743563948-erg65heg9jpp43hsk7ht84tab5coautl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.saltserv.firelogin",
+            "certificate_hash": "c720329ecca27b22322bce58cda39ad68d668ae1"
+          }
+        },
+        {
+          "client_id": "245743563948-8duikg9cvt9g9189df0oq91a8ii85fdh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKcvTWcO8fEzaBqM0FWpQvOUi-ixU0y-g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "245743563948-8duikg9cvt9g9189df0oq91a8ii85fdh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
