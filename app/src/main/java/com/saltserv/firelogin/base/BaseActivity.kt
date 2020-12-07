@@ -1,8 +1,11 @@
-package com.saltserv.firelogin
+package com.saltserv.firelogin.base
 
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.saltserv.firelogin.CloseScreen
+import com.saltserv.firelogin.ShowToast
+import com.saltserv.firelogin.VMCommand
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 

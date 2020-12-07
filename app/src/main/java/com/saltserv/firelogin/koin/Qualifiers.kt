@@ -1,4 +1,4 @@
-package com.saltserv.firelogin
+package com.saltserv.firelogin.koin
 
 import org.koin.core.qualifier.Qualifier
 
