@@ -8,29 +8,29 @@ import io.reactivex.schedulers.Schedulers
 import org.koin.android.ext.koin.androidContext
 import org.koin.dsl.module
 
-val application = module{
+val application = module {
 
-    single{
+    single {
         androidContext().getSharedPreferences(
             "FireLoginPrefs", Context.MODE_PRIVATE
         )
     }
 
-    single(IoScheduler){
+    single(IoScheduler) {
         Schedulers.io()
     }
 
-    single(UiScheduler){
+    single(UiScheduler) {
         AndroidSchedulers.mainThread()
     }
 
-    single{
+    single {
         FirebaseAuth.getInstance()
     }
 }
 
-val viewModelsModule = module{
-    single{
+val viewModelsModule = module {
+    single {
         SplashViewModel()
     }
 }
