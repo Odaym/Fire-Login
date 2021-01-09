@@ -15,7 +15,7 @@ class SplashActivity: BaseActivity<SplashViewModel>(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-//        viewModel.onScreenCreated()
+        viewModel.onScreenCreated()
     }
 
     override fun handleVMCommand(command: VMCommand) = when(command){

@@ -44,6 +44,9 @@ val viewModelsModule = module {
     }
 
     single {
-        SplashViewModel(dependencies = get())
+        SplashViewModel(
+            dependencies = get(),
+            determineAuthStatus = get()
+        )
     }
 }
