@@ -12,19 +12,21 @@ class SplashViewModel(
 ) : BaseViewModel(dependencies) {
 
     fun onScreenCreated() {
-        determineAuthStatus.invoke()
-            .subscribeOn(ioScheduler)
-            .observeOn(uiScheduler)
-            .subscribe({ authenticated ->
-                if (authenticated) {
-                    emitCommand(OpenMainScreen)
-                } else {
-                    emitCommand(OpenEntryScreen)
-                }
-            }, {
-                emitCommand(
-                    ShowToast("Something went wrong, please try again later and don't worry!")
-                )
-            })
+        subscription {
+            determineAuthStatus.invoke()
+                .subscribeOn(ioScheduler)
+                .observeOn(uiScheduler)
+                .subscribe({ authenticated ->
+                    if (authenticated) {
+                        emitCommand(OpenMainScreen)
+                    } else {
+                        emitCommand(OpenEntryScreen)
+                    }
+                }, {
+                    emitCommand(
+                        ShowToast("Something went wrong, please try again later and don't worry!")
+                    )
+                })
+        }
     }
 }
