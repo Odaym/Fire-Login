@@ -2,8 +2,9 @@ package com.saltserv.firelogin.koin
 
 import android.content.Context
 import com.google.firebase.auth.FirebaseAuth
-import com.saltserv.firelogin.SplashViewModel
 import com.saltserv.firelogin.base.BaseViewModel
+import com.saltserv.firelogin.ui.splash.SplashViewModel
+import com.saltserv.firelogin.usecase.DetermineAuthStatus
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import org.koin.android.ext.koin.androidContext
@@ -28,6 +29,10 @@ val application = module {
     single {
         FirebaseAuth.getInstance()
     }
+}
+
+val useCasesModule = module {
+    factory { DetermineAuthStatus(firebaseAuth = get()) }
 }
 
 val viewModelsModule = module {

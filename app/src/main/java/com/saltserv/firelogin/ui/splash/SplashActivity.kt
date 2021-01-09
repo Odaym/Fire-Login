@@ -1,6 +1,10 @@
-package com.saltserv.firelogin
+package com.saltserv.firelogin.ui.splash
 
 import android.os.Bundle
+import com.saltserv.firelogin.ui.main.MainActivity
+import com.saltserv.firelogin.OpenEntryScreen
+import com.saltserv.firelogin.OpenMainScreen
+import com.saltserv.firelogin.VMCommand
 import com.saltserv.firelogin.base.BaseActivity
 import org.koin.android.viewmodel.ext.android.viewModel
 

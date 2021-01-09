@@ -2,6 +2,7 @@ package com.saltserv.firelogin
 
 import android.app.Application
 import com.saltserv.firelogin.koin.application
+import com.saltserv.firelogin.koin.useCasesModule
 import com.saltserv.firelogin.koin.viewModelsModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
@@ -20,6 +21,7 @@ class FireLoginApplication : Application() {
             modules(
                 listOf(
                     application,
+                    useCasesModule,
                     viewModelsModule
                 )
             )
