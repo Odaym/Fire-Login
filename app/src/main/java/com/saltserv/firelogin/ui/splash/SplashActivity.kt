@@ -6,6 +6,7 @@ import com.saltserv.firelogin.OpenEntryScreen
 import com.saltserv.firelogin.OpenMainScreen
 import com.saltserv.firelogin.VMCommand
 import com.saltserv.firelogin.base.BaseActivity
+import com.saltserv.firelogin.ui.EntryActivity
 import org.koin.android.viewmodel.ext.android.viewModel
 
 class SplashActivity: BaseActivity<SplashViewModel>(){
@@ -20,7 +21,7 @@ class SplashActivity: BaseActivity<SplashViewModel>(){
 
     override fun handleVMCommand(command: VMCommand) = when(command){
         is OpenEntryScreen ->{
-            // Open the Entry screen
+            openEntryActivity()
             true
         }
         is OpenMainScreen ->{
@@ -33,6 +34,11 @@ class SplashActivity: BaseActivity<SplashViewModel>(){
 
     private fun openMainActivity(){
         MainActivity.start(this)
+        finish()
+    }
+
+    private fun openEntryActivity(){
+        EntryActivity.start(this)
         finish()
     }
 }

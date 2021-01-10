@@ -13,7 +13,7 @@ class SplashViewModel(
 
     fun onScreenCreated() {
         subscription {
-            determineAuthStatus.invoke()
+            determineAuthStatus()
                 .subscribeOn(ioScheduler)
                 .observeOn(uiScheduler)
                 .subscribe({ authenticated ->

@@ -12,7 +12,6 @@ class DetermineAuthStatus(
         val subject = SingleSubject.create<Boolean>()
 
         subject
-            .hide()
             .doOnSubscribe {
                 currentUser.getIdToken(false).addOnCompleteListener { task ->
                     if (task.isSuccessful) {
